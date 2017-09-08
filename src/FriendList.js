@@ -39,7 +39,7 @@ class FriendList extends Component {
     removeFriend(event, friend) {
         var id = friend.id;
         var tempFriends = this.state.friends;
-        axios.delete('${API_BASE}/${id}')
+        axios.delete(`${API_BASE}/${id}`)
             .then( response => {
                 var deleteFriend = tempFriends.indexOf(friend);
                 tempFriends.splice(deleteFriend, 1);
